@@ -5,7 +5,7 @@ const path = require('path');
 
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Choose your desired port
+const PORT = process.env.PORT || 3000; 
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -45,16 +45,16 @@ app.post('/send-email', (req, res) => {
 
     // Configure nodemailer to send emails
     const transporter = nodemailer.createTransport({
-        service: 'Gmail', // Update with your email service
+        service: 'Gmail', 
         auth: {
-            user: 'vikander.work@gmail.com', // Replace with your email
-            pass: '009606549155', // Replace with your password
+            user: 'vikander.work@gmail.com',
+            pass: '009606549155', 
         },
     });
 
     const mailOptions = {
         from: 'vikander.games@gmail.com',
-        to: 'vikander.work@gmail.com', // Replace with your recipient's email
+        to: 'vikander.work@gmail.com', 
         subject: subject,
         html: `<p>Full Name: ${fullName}</p>
                <p>Email: ${email}</p>
