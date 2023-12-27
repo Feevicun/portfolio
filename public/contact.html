@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Comatible" content="IE=edge">
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>  
+
+        <div class="menu-items">
+          <ul>
+          <li><a href="main.html">Home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="projects.html">projects</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="contact">
+    <form action="#">
+      <h2>Contact Me!</h2>
+      <div class="input-box">
+        <div class="input-field field">
+          <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+          <div class="error-txt">Full Name can't be blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+          <div class="error-txt email">Email Address can't be blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+          <div class="error-txt">Phone Number can't be blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+          <div class="error-txt">Subject can't be blank</div>
+        </div>
+      </div>
+      <div class="textarea-field field">
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+        <div class="error-txt">Message can't be blank</div>
+      </div>
+      <button>
+        <span class="box">
+          Send Message
+        </span>
+      </button>
+    </form>
+  </section>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

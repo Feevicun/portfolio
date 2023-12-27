@@ -1,0 +1,258 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color:  #3a3a3a;
+}
+
+/* Contact section styles */
+.contact {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 20px; 
+}
+
+/* Form styles */
+.contact form {
+  width: 100%;
+  width: 670px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+/* Heading styles */
+.contact form h2 {
+  color: #3a3a3a;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+ }
+
+/* Input box styles */
+.contact form .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Input field styles */
+.contact form .input-field {
+  width: calc(50% - 20px);
+}
+
+.contact form .item {
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background: none;
+  border-bottom: 2px solid #3a3a3a;
+  color: #3a3a3a;
+}
+
+.contact form .item::placeholder {
+  color: #3a3a3a;
+}
+
+/* Textarea field styles */
+.contact form .textarea-field {
+  width: 100%;
+}
+
+.contact form textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Error text styles */
+.contact form .error-txt {
+  display: none;
+  font-size: 14px;
+  color: #f00;
+  margin-top: 5px;
+}
+
+/* Submit button styles */
+.contact form button {
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #3a3a3a;
+  width: 140px;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact form button:hover {
+  opacity: 0.7;
+}
+
+
+/* Hamburger menu */
+.container {
+  max-width: 1600px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 23px;
+  width: 30px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 3.5px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 150px;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
