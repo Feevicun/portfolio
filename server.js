@@ -13,27 +13,27 @@ app.use(bodyParser.json());
 
 // Serve static files (HTML, CSS, images)
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/css', express.static(path.join(__dirname, 'public', 'css')));
-app.use('/js', express.static(path.join(__dirname, 'public', 'js')));
+app.use('/css', express.static(path.join(__dirname,'public','css')));
+app.use('/js', express.static(path.join(__dirname,'public',  'js')));
 app.use('/img', express.static(path.join(__dirname, 'public', 'img')));
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 
-  
 
 // html pages
 app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'main.html'));
+    res.sendFile(path.join(__dirname,'public', 'main.html'));
 });
 
 app.get('/about', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'about.html'));
+    res.sendFile(path.join(__dirname,'public', 'about.html'));
 });
 
 app.get('/contact', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+    res.sendFile(path.join(__dirname,'public', 'contact.html'));
 });
 
 app.get('/projects', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'projects.html'));
+    res.sendFile(path.join(__dirname, 'public','projects.html'));
 });
 
 app.get('/', (req, res) => {
